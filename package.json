@@ -92,7 +92,6 @@
     "cypress:run": "cypress run",
     "test": "npm run test:unit & npm run test:e2e",
     "test:unit": " react-scripts test --watchAll=false --coverage=true",
-    "pretest:e2e": "npm start& & wait-on http://localhost:3000",
     "test:e2e": "cypress run coverage=true"
   },
   "eslintConfig": {

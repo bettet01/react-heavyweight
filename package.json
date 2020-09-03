@@ -1,15 +1,15 @@
 {
   "name": "skeleton",
   "version": "1.0.0",
-  "description": "A payment application to demonstrate **real-world** usage of Cypress testing methods, patterns, and workflows. For a full reference of our documentation, go to https://docs.cypress.io",
+  "description": "React skeleton extending cra with some common deps and pre-configured ci and tests",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cypress-io/cypress-realworld-app.git"
+    "url": "https://github.com/bettet01/react-skeleton"
   },
   "author": "Cypress DX Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cypress-io/cypress-realworld-app/issues"
+    "url": "https://github.com/bettet01/react-skeleton/issues"
   },
   "engines": {
     "node": ">=12"

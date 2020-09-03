@@ -1,7 +1,7 @@
 codecov:
   require_ci_to_pass: true
 ignore:
-  - "./src/index.tsx"
+  - "src/index.tsx"
 coverage:
   precision: 2
   round: nearest
@@ -13,12 +13,6 @@ coverage:
         target: auto
         threshold: 0.1%
         if_not_found: success
-    backend:
-      paths:
-        - backend
-    frontend:
-      paths:
-        - src
 
 comment:
   layout: "reach,diff,flags,tree"

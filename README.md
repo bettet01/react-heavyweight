@@ -5,7 +5,7 @@ a template that already takes care of testing and ci setup, so you can do the fu
 
 ## TODO
 ### Before you get started head on over and sign up on
-[Travis Ci](https://travis-ci.com) 
+[Travis Ci](https://travis-ci.com) and
 [CodeCov](https://coodecov.io) 
     
 ### Next Steps

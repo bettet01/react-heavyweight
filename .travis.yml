@@ -4,7 +4,8 @@ node_js:
 
 
 before_script:
-  - npm run start&
+  - npm install
+  - pm2 start npm -- start
 
 script:
   - npm test

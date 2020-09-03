@@ -4,7 +4,7 @@ node_js:
 
 
 before_script:
-  - (npm run start&)
+  - npm run start&
 
 script:
   - npm test

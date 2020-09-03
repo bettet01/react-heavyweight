@@ -15,6 +15,13 @@
 # production
 /build
 
+#store empty folders
+src/components/_.txt
+src/machines/_.txt
+src/models/_.txt
+src/svgs/_.txt
+src/util/_.txt
+
 # misc
 .DS_Store
 .env.local

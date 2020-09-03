@@ -84,6 +84,7 @@
   },
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
+    "start:ci": "serve --no-clipboard --listen ${PORT:-8080}",
     "types": "tsc --noEmit",
     "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
     "build": "react-scripts build",

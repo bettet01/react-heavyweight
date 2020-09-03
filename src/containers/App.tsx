@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function App() {
-  return (
-    <div>Start here.</div>
-  );
+  return <div>Start here.</div>;
 }
 
 export default App;

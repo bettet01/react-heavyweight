@@ -1,7 +1,5 @@
-
-
 describe("first test", () => {
-    it("should run", () => {
-        cy.visit("/")
-    })
-})
+  it("should run", () => {
+    cy.visit("/");
+  });
+});

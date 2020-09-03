@@ -52,6 +52,7 @@
     "husky": "4.2.5",
     "json": "10.0.0",
     "pm2": "^4.4.1",
+    "prettier": "^2.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router": "5.2.0",
@@ -78,18 +79,20 @@
     "mochawesome": "6.1.1",
     "mochawesome-merge": "4.1.0",
     "mochawesome-report-generator": "5.1.0",
-    "nyc": "15.1.0"
+    "nyc": "15.1.0",
+    "wait-on": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
     "types": "tsc --noEmit",
-    "prettier": "prettier --write '**/**.{ts,js,tsx}'",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx}\"",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test": "npm run test:unit & npm run test:e2e",
     "test:unit": " react-scripts test --watchAll=false --coverage=true",
+    "pretest:e2e": "npm start& & wait-on http://localhost:3000",
     "test:e2e": "cypress run coverage=true"
   },
   "eslintConfig": {
@@ -123,7 +126,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm test"
+      "pre-push": "npm run prettier && npm run types && npm test"
     }
   },
   "percy": {

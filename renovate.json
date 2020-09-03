@@ -1,0 +1,25 @@
+{
+  "extends": ["config:base"],
+  "baseBranch": "master",
+  "automerge": false,
+  "commitMessage": "{{semanticPrefix}}Update {{depName}} to {{newVersion}} 🌟",
+  "prTitle": "{{semanticPrefix}}{{#if isPin}}Pin{{else}}Update{{/if}} dependency {{depName}} to version {{#if isRange}}{{newVersion}}{{else}}{{#if isMajor}}{{newVersionMajor}}.x{{else}}{{newVersion}}{{/if}}{{/if}} 🌟",
+  "major": {
+    "automerge": false
+  },
+  "minor": {
+    "automerge": false
+  },
+  "prHourlyLimit": 1,
+  "updateNotScheduled": false,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "masterIssue": true,
+  "packageRules": [
+    {
+      "packageNames": ["react-scripts"],
+      "allowedVersions": "3.4.0"
+    }
+  ]
+}

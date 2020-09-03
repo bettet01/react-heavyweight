@@ -1,28 +1,112 @@
 {
-  "name": "cleancodebase-example",
-  "version": "0.1.0",
+  "name": "skeleton",
+  "version": "1.0.0",
+  "description": "A payment application to demonstrate **real-world** usage of Cypress testing methods, patterns, and workflows. For a full reference of our documentation, go to https://docs.cypress.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cypress-io/cypress-realworld-app.git"
+  },
+  "author": "Cypress DX Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cypress-io/cypress-realworld-app/issues"
+  },
+  "engines": {
+    "node": ">=12"
+  },
   "private": true,
   "dependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@percy/cypress": "^2.3.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/axios": "^0.14.0",
+    "@types/babel__core": "^7.1.9",
+    "@types/babel__preset-env": "^7.9.0",
+    "@types/cypress": "^1.1.3",
+    "@types/eslint-config-prettier": "^6.11.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/faker": "^4.1.12",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/react-virtualized": "^9.21.10",
+    "@types/testing-library__jest-dom": "^5.9.2",
+    "@types/testing-library__react": "^10.2.0",
+    "@types/testing-library__user-event": "^4.2.0",
+    "@types/typescript": "^2.0.0",
+    "@types/yup": "^0.29.6",
+    "@xstate/react": "^0.8.1",
+    "axios": "^0.20.0",
+    "faker": "^5.1.0",
+    "formik": "^2.1.5",
+    "husky": "^4.2.5",
+    "json": "^10.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "react-virtualized": "^9.22.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^3.7.5",
+    "xstate": "^4.13.0",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.8.1",
+    "@cypress/instrument-cra": "^1.3.1",
+    "@types/connect-history-api-fallback": "^1.3.3",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "babel-loader": "^8.1.0",
+    "cypress": "^5.1.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "nyc": "^15.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
+    "types": "tsc --noEmit",
+    "prettier": "prettier --write '**/**.{ts,js,tsx}'",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "npm run test:unit & npm run test:e2e",
+    "test:unit": " react-scripts test --watchAll=false --coverage=true",
+    "test:e2e": "cypress run coverage=true"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "plugin:prettier/recommended",
+      "plugin:cypress/recommended"
+    ],
+    "plugins": [
+      "cypress",
+      "prettier"
+    ],
+    "rules": {
+      "no-unused-expressions": 0
+    },
+    "env": {
+      "cypress/globals": true
+    }
   },
   "browserslist": {
     "production": [
@@ -34,6 +118,30 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm test"
+    }
+  },
+  "percy": {
+    "version": 1,
+    "snapshot": {
+      "widths": [
+        1280
+      ]
+    }
+  },
+  "nyc": {
+    "exclude": [
+      "src/models/*.tsx",
+      "src/index.tsx",
+      "src/serviceWorker.ts"
+    ],
+    "reporter": [
+      "html",
+      "json"
     ]
   }
 }

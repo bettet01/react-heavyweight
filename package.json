@@ -81,7 +81,6 @@
   },
   "scripts": {
     "start": "react-scripts -r @cypress/instrument-cra start",
-    "start:ci": "(npm run start&)",
     "types": "tsc --noEmit",
     "prettier": "prettier --write '**/**.{ts,js,tsx}'",
     "build": "react-scripts build",

@@ -1,3 +1,4 @@
+// @ts-ignore
 import codeCoverageTask from "@cypress/code-coverage/task";
 
 /// <reference types="cypress" />
@@ -17,7 +18,7 @@ import codeCoverageTask from "@cypress/code-coverage/task";
 /**
  * @type {Cypress.PluginConfig}
  */
-module.exports = (on, config) => {
+module.exports = (on: any, config: any) => {
     codeCoverageTask(on, config);
 
     // add other tasks to be registered here

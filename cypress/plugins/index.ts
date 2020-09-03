@@ -19,11 +19,11 @@ import codeCoverageTask from "@cypress/code-coverage/task";
  * @type {Cypress.PluginConfig}
  */
 module.exports = (on: any, config: any) => {
-    codeCoverageTask(on, config);
+  codeCoverageTask(on, config);
 
-    // add other tasks to be registered here
+  // add other tasks to be registered here
 
-    // IMPORTANT to return the config object
-    // with the any changed environment variables
-    return config
-}
+  // IMPORTANT to return the config object
+  // with the any changed environment variables
+  return config;
+};

@@ -1,8 +1,7 @@
 codecov:
   require_ci_to_pass: true
 ignore:
-  - "src/index.tsx"
-  - "src/serviceWorker.ts"
+  - "./src/index.tsx"
 coverage:
   precision: 2
   round: nearest

@@ -1,10 +1,10 @@
 <h1 align="center"><div>React Heavyweight</div>
 <div>a template that already takes care of testing and ci setup, so you can do the fun stuff</div>
-<div><a href="https://codecov.io/gh/bettet01/react-skeleton">
-       <img src="https://codecov.io/gh/bettet01/react-skeleton/branch/master/graph/badge.svg"  alt=""/>
+<div><a href="https://codecov.io/gh/bettet01/react-heavyweight">
+       <img src="https://codecov.io/gh/bettet01/react-heavyweight/branch/master/graph/badge.svg?token=7OUI5QXQD4" alt=""/>
      </a>
      <a href="https://travis-ci.com/bettet01/react-skeleton">
-     <img src="https://travis-ci.com/bettet01/react-skeleton.svg?branch=master" alt=""/>
+     <img src="https://travis-ci.com/bettet01/react-heavyweight.svg?branch=master" alt=""/>
      </a>
 </div>
 </h1>

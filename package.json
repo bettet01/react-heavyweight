@@ -37,31 +37,35 @@
     "@types/node": "12.12.55",
     "@types/react": "16.9.49",
     "@types/react-dom": "16.9.8",
+    "@types/react-redux": "^7.1.9",
     "@types/react-router": "5.1.8",
     "@types/react-router-dom": "5.1.5",
     "@types/react-virtualized": "9.21.10",
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
     "@types/testing-library__jest-dom": "5.9.2",
     "@types/testing-library__react": "10.2.0",
     "@types/testing-library__user-event": "4.2.0",
     "@types/typescript": "2.0.0",
     "@types/yup": "0.29.6",
-    "@xstate/react": "0.8.1",
     "axios": "0.20.0",
     "faker": "5.1.0",
     "formik": "2.1.5",
-    "husky": "4.2.5",
     "json": "10.0.0",
     "prettier": "2.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3",
     "react-virtualized": "9.22.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "serve": "11.3.2",
     "ts-node": "9.0.0",
     "typescript": "3.9.7",
-    "xstate": "4.13.0",
     "yup": "0.29.3"
   },
   "devDependencies": {
@@ -76,6 +80,7 @@
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-cypress": "2.11.1",
     "eslint-plugin-prettier": "3.1.4",
+    "husky": "^4.2.5",
     "mocha": "8.1.3",
     "mochawesome": "6.1.1",
     "mochawesome-merge": "4.1.0",
@@ -127,15 +132,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run prettier && npm run types && npm test"
-    }
-  },
-  "percy": {
-    "version": 1,
-    "snapshot": {
-      "widths": [
-        1280
-      ]
+      "pre-push": "npm run prettier && npm run types"
     }
   },
   "nyc": {
